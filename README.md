@@ -14,8 +14,11 @@ The proposed solution offers significant business benefits, including enhanced r
 ## Demo Video
 
 
-https://github.com/Ankit-2409/AI_SERVICES/assets/98513113/f67e62c1-1765-45cc-ae65-7394eef64f75
 
+
+
+
+https://github.com/Ankit-2409/AI_SERVICES/assets/98513113/6d9ec34b-2e90-490b-b68d-25c692b07262
 
 
 
