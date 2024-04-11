@@ -10,3 +10,14 @@ To address these challenges, our solution leverages Microsoft Azure for text ext
 # Business Benefits
 
 The proposed solution offers significant business benefits, including enhanced regulatory compliance, risk mitigation, and operational efficiency. By automating rule generation and monitoring processes, organizations can ensure adherence to regulations like GDPR and mitigate the risk of data breaches. The blocking mechanism adds an extra layer of security, protecting sensitive information and preventing unauthorized access. Moreover, the projected revenue of $4.5 million reflects the potential value derived from improved compliance and risk management capabilities, contributing to organizational growth and customer trust.
+
+## Demo Video
+
+
+
+**Team Name: TECH INNOVATORS**
+
+**Members:**
+1. ANKIT SINGH
+2. CH MALVIKA REDDY
+3. PRATHAM AGARWALLA
