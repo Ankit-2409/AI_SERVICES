@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit's Chat History</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        .user-controls {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        #deactivate-button {
+            font-weight: bold;
+            color: white;
+            background-color: red;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #deactivate-button:hover {
+            background-color: darkred;
+        }
+        #deactivated-message {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="user-controls">
+            <p>Number of Warnings: <span id="warning-count">2</span></p>
+            <button id="deactivate-button">Deactivate</button>
+        </div>
+        <h1>Ankit's Chat History</h1>
+        <div class="chat-history">
+            <div class="row">
+                <div class="column user">
+                    <p>Ankit: Can you provide advice on cryptocurrency investment?</p>
+                </div>
+                <div class="column bot">
+                    <p>M&G AI Response: I'm sorry, but I am unable to provide a response to this question as it is beyond my scope of expertise.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column user">
+                    <p>Ankit: What are the benefits of long-term investment?</p>
+                </div>
+                <div class="column bot">
+                    <p>M&G AI Response: Long-term investment offers the potential for higher returns, reduces the impact of market volatility, and helps in achieving financial goals.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column user">
+                    <p>Ankit: How can I diversify my investment portfolio?</p>
+                </div>
+                <div class="column bot">
+                    <p>M&G AI Response: Diversification involves investing in a variety of assets to spread risk. Consider stocks, bonds, real estate, and commodities for a balanced portfolio.</p>
+                </div>
+            </div>
+            <!-- Add more rows here -->
+        </div>
+        <div id="deactivated-message" style="display: none;">User Deactivated Successfully!</div>
+    </div>
+
+    <!-- Add JavaScript for counting warnings and deactivating user -->
+    <script>
+        // JavaScript to count warnings and deactivate user
+        let warningCount = 0;
+
+        // Function to update warning count
+        function updateWarningCount() {
+            const warningCountElement = document.getElementById('warning-count');
+            warningCountElement.textContent = warningCount;
+        }
+
+        // Function to handle deactivating user
+        function deactivateUser() {
+            // Ask for confirmation
+            if (confirm("Are you sure you want to deactivate this user?")) {
+                // Display "Deactivated successfully" message
+                const deactivatedMessage = document.getElementById('deactivated-message');
+                deactivatedMessage.style.display = 'block';
+
+                // Add your code to deactivate the user here
+            }
+        }
+
+        // Event listener for deactivate button click
+        document.getElementById('deactivate-button').addEventListener('click', function() {
+            deactivateUser();
+        });
+    </script>
+</body>
+</html>

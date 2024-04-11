@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 28px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left;
+            color: #555;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+        }
+        label .mandatory-star {
+            color: red;
+            margin-left: 3px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"],
+        input[type="tel"],
+        input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: #f3f3f3;
+            color: #333;
+            transition: border-color 0.3s ease;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group input[type="radio"] {
+            display: inline;
+            margin-right: 5px;
+        }
+        .fa-lock,
+        .fa-envelope,
+        .fa-user {
+            margin-right: 5px;
+        }
+        .country-code-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .country-code-box input[type="tel"] {
+            width: 100%;
+        }
+        .country-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+        .country-option img {
+            width: 25px;
+            margin-right: 5px;
+        }
+        .password-constraints {
+            text-align: left;
+            margin-top: 5px;
+        }
+        .password-constraints li {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create an Account</h2>
+        <form id="signupForm">
+            <div class="form-group">
+                <label for="firstName">First Name <span class="mandatory-star">*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name <span class="mandatory-star">*</span></label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email <span class="mandatory-star">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password <span class="mandatory-star">*</span></label>
+                <input type="password" id="password" name="password" required>
+                <ul class="password-constraints">
+                    <li>Minimum 8 characters</li>
+                    <li>At least one uppercase letter</li>
+                    <li>At least one lowercase letter</li>
+                    <li>At least one number</li>
+                    <li>At least one special character</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobile Number <span class="mandatory-star">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number" required>
+            </div>
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var phone = document.getElementById("phone").value;
+            
+            if (firstName.trim() === "" || lastName.trim() === "" || email.trim() === "" || password.trim() === "" || phone.trim() === "") {
+                alert("Please fill in all fields.");
+            } else {
+                alert("Signed up successfully!");
+                window.location.href = "login.html";
+            }
+        });
+    </script>
+</body>
+</html>

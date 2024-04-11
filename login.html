@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-image: url('login.jpeg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: flex;
+            justify-content: flex-end; 
+            align-items: center;
+            height: 100vh; 
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 10%; 
+            margin-left: 10%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"],
+        select { /* Added select for dropdown */
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #27ae60;
+        }
+        .link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .ai-services {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ai-services">
+            <p style="font-size: 24px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase;">M&G AI Services</p>
+        </div>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="usertype">User Type:</label> <!-- Added user type field -->
+            <select id="usertype" name="usertype">
+                <option value="admin">Admin</option>
+                <option value="normal" selected>Normal User</option> <!-- Default selected -->
+                <option value="pro">Pro User</option>
+            </select>
+            <input type="submit" value="Login">
+        </form>
+        <div class="link">
+            <a href="signup.html">New User? Sign Up</a><br>
+            <a href="forgotpassword.html">Forgot Password?</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var userType = document.getElementById("usertype").value; // Get selected user type
+            if (username.trim() === "" || password.trim() === "") {
+                alert("Please enter username and password.");
+            } else {
+                if (userType === "admin") {
+                    if (username === "admin" && password === "admin@1") {
+                        window.location.href = "admin.html";
+                    } else {
+                        alert("Invalid credentials for admin.");
+                    }
+                } else if (userType === "pro") {
+                    alert("You don't have any active subscription.");
+                } else if (userType === "normal") {
+                    // Redirect normal user to specified link
+                    window.location.href = "https://af2110c90227762ce5.gradio.live";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

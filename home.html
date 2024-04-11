@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&G AI Services</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffbb33; /* Changed the background color */
+            margin: 0;
+            padding: 0;
+            position: relative; /* Add position relative to the body */
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto; /* Center the container */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center; /* Center the content within the container */
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .ai-image {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .ai-image img {
+            max-width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .feature {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            background-color: #f3f3f3;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature:hover {
+            transform: scale(1.05);
+        }
+        .buttons {
+            position: absolute; /* Position the buttons absolutely */
+            top: 20px; /* Adjust top position */
+            right: 20px; /* Adjust right position */
+            text-align: right; /* Align buttons to the right */
+        }
+        .buttons button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            outline: none;
+        }
+        .buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to M&G AI Services</h1>
+        <p>Empowering Financial Decisions with Advanced AI</p>
+    </header>
+    <div class="container">
+        <div class="ai-image">
+            <img src="ai.gif" alt="AI GIF">
+        </div>
+        <h2>About Our AI</h2>
+        <p>
+            Our AI revolutionizes financial expertise by providing cutting-edge solutions in asset management, investment advisory, wealth management, and more. With state-of-the-art technology, our AI empowers individuals and businesses to achieve financial success.
+        </p>
+        <div class="features">
+            <div class="feature">
+                <h3>Real-time Insights</h3>
+                <p>Gain access to real-time financial data and insights for informed decision-making.</p>
+            </div>
+            <div class="feature">
+                <h3>Personalized Recommendations</h3>
+                <p>Receive personalized investment recommendations tailored to your financial goals.</p>
+            </div>
+            <div class="feature">
+                <h3>Intelligent Portfolio Management</h3>
+                <p>Optimize your portfolio with intelligent management and risk assessment.</p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button onclick="location.href='login.html'">Login</button>
+            <button onclick="location.href='signup.html'">Sign Up</button>
+        </div>
+    </div>
+</body>
+</html>
