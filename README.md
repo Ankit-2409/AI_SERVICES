@@ -1,4 +1,4 @@
-# AI_SERVICES
+# M&G AI SERVICES
 # Problem Statement
 
 Organizations face challenges in ensuring regulatory compliance and mitigating risks associated with user interactions with AI tools like ChatGPT. Manual rule generation and monitoring processes are time-consuming and prone to errors, posing a threat to data privacy and regulatory adherence.
